@@ -1,0 +1,442 @@
+---
+title: "Forschungsmethoden"
+subtitle: "für Studierende der Geragogik und Erwachsenenbildung"
+author: "Samuel Merk"
+format: 
+  revealjs:
+    controls: true
+    logo: img/PHlogo.svg
+    theme: [dark, css/custom.scss]
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 3
+      buttons: true
+      chalk-effect: 0
+    fullscreen: true
+    pdfexport: true
+bibliography: references.bib
+csl: apa.csl
+---
+## Herzlich willkommen!  [{{< fa door-open >}}]{.imp} {.center}
+```{r hidden chunk which creates template stuff}
+#| echo: false
+
+## in terminal ########
+# quarto install extension quarto-ext/fontawesome
+# quarto install extension schochastics/academicons
+#
+
+########################
+library(fontawesome)
+library(tidyverse)
+
+# Change css to lecker PH green
+if(!dir.exists("img"))
+dir.create("img")
+if(!dir.exists("css"))
+dir.create("css")
+fileConn<-file("css/custom.scss")
+writeLines(c("/*-- scss:defaults --*/",
+             "$link-color: #8cd000 !default;"), fileConn)
+close(fileConn)
+
+# create sash with URL
+sash <- 
+  ggplot() + 
+  geom_polygon(data = tibble(x = c(0,4,5.5,0),
+                             y = c(1,5,5,-.5)),
+               aes(x,y), fill = "#8cd000") + 
+  coord_fixed() +
+  annotate(geom = "text", 
+           label = " www.bit.ly/merk088", 
+           x = .8, y = .8, 
+           angle = 45,
+           hjust = 0, vjust = 0,
+           size = 10,
+           color = "white") +
+ theme_void() + 
+ theme(plot.margin = margin(-2,0,0,-12, unit = "cm"))
+ggsave("img/sash.svg", sash)
+```
+
+```{css}
+.callout-title {background-color: #8cd000 !important;}
+
+.imp {
+  color: #8cd000;
+}
+
+.em08{
+  font-size: .8em;
+}
+.em07{
+  font-size: .7em;
+}
+
+
+figure>figcaption {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.citation {
+  font-size: .8em;
+  color: #8cd000;
+}
+
+
+.timevis.html-widget .vis-background .vis-minor.vis-odd {
+  background: #8CD00030;
+  }
+  
+.vis-text {
+  color: #ffffff !important;
+  }
+  
+.vis-timeline {
+  border: transparent;
+  }
+  
+.vis-item {
+  border-color: #8CD000; 
+  background-color: #8CD000; 
+  color: #ffffff !important;
+}
+
+
+
+.vis-current-time {
+  background-color: #8CD00000;
+}
+  
+```
+
+## Geplanter Ablauf Tag 1 {.smaller}
+* Vorstellung von Personen und Forschungsinteressen <!--30-->
+* Organisatorische Klärungen <!--15-->
+* Input: Das »Große Ganze« - konfirmatorischer und explorativer Forschungsprozess <!--30-->
+
+[{{< fa mug-hot >}}]{style="color:#8cd000; font-size:1.5em;"} <!--20-->
+
+* Input und Übung: Forschungsstand recherchieren <!--30-->
+
+[{{< fa utensils >}}]{style="color:#8cd000; font-size:1.5em;"} <!--20-->
+
+* Input und Übung: Methodologie & Gütekriterien
+
+
+## [Vorstellung von Pers. und Forschungsint.]{style="font-size:.85em"} {.center}
+
+:::{.callout-tip appearance='default' icon=false}
+## Wer sind Sie und wofür interessieren Sie sich?
+- Bitte stellen Sie kurz Ihre Bildungs- und Berufsbiografie vor
+- Bitte teilen Sie uns Ihre inhaltlichen Interessen mit
+:::
+
+## Organisatorische Klärungen
+* Sie bekommen 4 ECTS für diese Veranstaltung
+* Die Studierenden der Geragogik müssen eine Klausur schreiben
+    * Termin Ihrer Wahl
+    * Form hat mehr oder weniger Hausarbeitscharakter
+    * Sie wissen morgen Nachmittag genau wie die Klausur aussieht
+* Inhaltliche & organisatorische Planung ist als Vorschlag zu verstehen - gerne nehme ich Ihre Anregungen auf
+
+
+## Konfir. und explo. Forschungsprozess
+![](img/prozesse.png){fig-align="center"}
+
+## Forschungsstand recherchieren {.incremental}
+::: {.incremental}
+* Wie gehen Sie typischerweise bei der Literatursuche vor?
+* Welche Datenbanken kennen Sie?
+    * Ich halte u.a. für wichtig: google.scholar, fis.bildung, ERIC, PsychINFO
+* Nutzen Sie boolsche Operatoren `AND`, `OR`, `NOT`, `-`, `*`?
+* Nutzen Sie Filter wie »nur Peer Review« oder »nur Journal XYZ«?
+:::
+
+## Methodologie und Gütekriterien
+. . .
+
+[{{< fa microscope >}}]{.imp} Wissenschaft vs. nicht-Wissenschaft  
+
+. . .  
+
+[{{< fa ruler >}}]{.imp} Kriterien Wissenschaftlicher Qualität  
+
+. . .
+
+[{{< fa map >}}]{.imp} Systematisierung quantitativer Studien  
+
+. . .
+
+[{{< fa arrow-trend-up >}}]{.imp } Steigerung der Qualität
+
+## <!--Wissenschaft vs. nicht-Wissenschaft--> {.center}
+[{{< fa microscope >}} Wissenschaft vs. nicht-Wissenschaft]{.em15 .c .imp}
+
+## Das Abgrenzungsproblem {.smaller auto-animate=true .center}
+![](img/wiss_meme.png)
+
+
+## Das Abgrenzungsproblem {.smaller auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width='80%'}
+Wer wissenschaftliche Forschung („scientific research") betreibt, sucht mithilfe [anerkannter wissenschaftlicher Methoden und Methodologien]{.imp} auf der Basis des [bisherigen Forschungsstandes]{.imp} (d. h. vorliegender Theorien und empirischer Befunde) [zielgerichtet]{.imp} nach gesicherten neuen Erkenntnissen, [dokumentiert]{.imp} den Forschungsprozess sowie dessen Ergebnisse [in nachvollziehbarer Weise]{.imp} und stellt die Studie in Vorträgen und Publikationen der [Fachöffentlichkeit]{.imp} vor [@doering2016].<br><br>
+:::
+
+::: {.column width='20%'}
+<br><br><br1
+>
+<center>![](img/wiss_meme.png)</center>
+:::
+
+::::
+
+::: {.callout-tip icon=false collapse="false"}
+## {{< fa book-open >}} Weiterführende Literatur
+Lakatos, I. (1977). The Methodology of Scientific Research Programmes: Philosophical Papers Volume I. Cambridge University Press.  
+Kuhn, Thomas S. (1962). The Structure of Scientific Revolutions. University of Chicago Press.    
+Popper, K. (1989). Logik der Forschung. Mohr.
+:::
+
+
+## Nicht-Wissenschaft Bsp. 1: {.smaller .center}
+
+
+
+## Beispiel Nicht-Wissenschaft: {.smaller .center}
+
+> [Datenbasierte Entwicklung]{.imp}. Eine Befragung von Klienten/Patienten/Auszubildenden zu einer geplanten Innovation trotz »perfektem Fragebogen & optimaler Auswertung« Nicht-Wissenschaft dar.
+
+. . .
+
+<br> Wer wissenschaftliche Forschung („scientific research") betreibt,
+sucht mithilfe [anerkannter wissenschaftlicher Methoden und
+Methodologien]{.imp} <i class="fa fa-check-circle"></i> auf der Basis
+des [bisherigen Forschungsstandes]{.imp}
+<i class="fa fa-times-circle"></i> (d. h. vorliegender Theorien und
+empirischer Befunde) \[zielgerichtet\]
+<i class="fa fa-check-circle"></i> nach gesicherten neuen Erkenntnissen,
+[dokumentiert]{.imp} <i class="fa fa-times-circle"></i> den
+Forschungsprozess sowie dessen Ergebnisse [in nachvollziehbarer
+Weise]{.imp} <i class="fa fa-times-circle"></i> und stellt die Studie in
+Vorträgen und Publikationen der [Fachöffentlichkeit]{.imp}
+<i class="fa fa-times-circle"></i> vor.
+
+## <!--Kriterien der wiss. Qualität --> {.center}
+[{{< fa ruler >}} Kriterien der wiss. Qualität]{.em15 .c .imp}
+
+## Kriterien der wiss. Qualität {.smaller .center}
+Im Bereich der quantitativen empirischen Sozialforschung sind die folgenden Kriterien vglw. unumstritten [@doering2016]:
+
+::: {.incremental}
+* Relevanz
+* Ethische Strenge
+* Methodische Strenge
+     * Konstruktvalidität
+     * Interne Validität
+     * Externe Validität
+     * Statistische Validität
+* Präsentationsqualität
+:::
+
+## Definition: Interne Validität {.center .smaller}
+<br>
+
+> Die interne Validität einer Studie beschreibt inwiefern die untersuchten Variablenzusammenhänge als kausal (Ursache-Wirkungs-Relation) interpretiert werden können [siehe @campbell1957a].
+
+## Definition: Externe Validität {.center .smaller}
+<br>
+
+> Die externe Validität einer Studie beschreibt inwiefern sich die Schlussfolgerungen einer Studie (auf andere Proband\*innen, Zeiten, etc.) verallgemeinern lassen [siehe @campbell1957a].
+
+## <!--Systematisierung (quantitativer Studien) in den Sozialwissenschaften--> {.center}
+[{{< fa map >}} Systematisierung (quantitativer Studien) in den Sozialwissenschaften]{.em15 .c .imp}
+
+## [Empirische, theo. & methodische Studien ]{style="font-size: 0.92em"} {.smaller .center}
+
+::: {style="font-size: 0.7em"}
+> [Empirisch]{.imp} meint auf Beobachtungen beruhend, die zielgerichtet für die Forschungsfrage generiert wurden. <br> [Theoretisch]{.imp} meint ohne direkten Rückgriff auf empirische Daten. <br> 
+[Methodisch]{.imp} meint eine wissenschaftliche Methode untersuchend.
+
+:::
+
+<br>
+
+::: {.fragment fragment-index=1}
+### [Beispiele (Auszüge aus Abstracts)]{style="font-size: 0.80em"}
+:::
+
+::: columns
+::: {.column width="40%"}
+::: {style="font-size: 0.6em"}
+::: {.fragment fragment-index=2}
+"Angesichts der Alterung der Gesellschaft und der hohen Kosten für die Unterstützung und Pflege in privaten Haushalten stellt sich die Frage, welche Rolle assistive Roboter spielen können. Dieser Beitrag richtet sich auf die Frage, inwieweit Roboter in der Pflege heute von der erwachsenen Bevölkerung in Deutschland akzeptiert werden. Und inwieweit beeinflussen Geschlecht, Alter und Erfahrung (beruflich, persönlich) das Ausmaß dieser Akzeptanz? Die durchgeführten Auswertungen beruhen auf drei repräsentativen Erhebungen mit insgesamt über 7000 Befragten. "
+[@rebitschek2020].<br>
+:::
+:::
+
+::: {style="font-size: 0.85em"}
+::: {.fragment fragment-index=3}
+[➡ Empirische Studie]{.imp}
+:::
+:::
+:::
+
+::: {.column width="60%"}
+::: {style="font-size: 0.65em"}
+::: {.fragment fragment-index=4}
+"Im Februar 2016 wurde die Machbarkeitsstudie des Deutschen Bildungsservers zum Aufbau und Betrieb von OER-Infrastrukturen in der Bildung veröffentlicht. [...] Zentrales Ergebnis der Studie ist, dass die Akteure in der Erwachsenenbildungslandschaft eine bundesweite, bildungsbereichsübergreifende Infrastruktur für freie digitale Bildungsmedien (OER) befürworten, wenn hierbei die bildungsspezifischen Anforderungen der Erwachsenenbildung berücksichtig werden. Zur Verankerung und Verbreitung des Themas OER in der Erwachsenenbildung sind hierfür flankierende Anreizsysteme und Fördermaßnahmen erforderlich, v.a. in den Bereichen der Materialentwicklung, der Kompetenzentwicklung, der Didaktik, der Qualitätssicherung und im Bereich der technischen Rahmenbedingungen für digitales Lernen." [@hirschmann2016].<br>
+:::
+:::
+
+::: {style="font-size: 0.85em"}
+::: {.fragment fragment-index=5}
+[➡ Empirische Studie]{.imp}
+:::
+:::
+:::
+
+
+:::
+
+
+
+## Primär-, Sekundär-, Metastudien {.smaller .center}
+
+::: {style="font-size: 0.7em"}
+> [Primärstudien]{.imp} nutzen einen eigens für die Studie generierten Datensatz.  
+[Sekundärstudien]{.imp} reanalysieren bereits vorhandene Datensätze.  
+[Metaanalysen]{.imp} analysieren die Ergebnisse mehrerer vergleichbarer Studien.
+
+:::
+
+<br>
+
+::: {.fragment fragment-index=1}
+
+### Beispiel (Auszug aus Abstract): {.smaller}
+::: {style="font-size: 0.8em"}
+"Sowohl die tatsächliche als auch die wahrgenommene soziale Isolation sind mit einem erhöhten Risiko für eine frühe Mortalität verbunden. In dieser Übersichtsarbeit wollen wir das allgemeine und relative Ausmaß von sozialer Isolation und Einsamkeit ermitteln und mögliche Moderatoren untersuchen. Wir haben eine Literatursuche nach Studien (Januar 1980 bis Februar 2014) in MEDLINE, CINAHL, PsycINFO, Social Work Abstracts und Google Scholar durchgeführt. Die eingeschlossenen Studien lieferten quantitative Daten zur Sterblichkeit in Abhängigkeit von Einsamkeit, sozialer Isolation oder Alleinleben. In den Studien, in denen mehrere mögliche Störfaktoren statistisch kontrolliert wurden, waren die gewichteten durchschnittlichen Effektstärken wie folgt [...]" (@holt-lunstad2015; Übersetzung Merk).<br>
+:::
+:::
+
+::: {.fragment fragment-index=2}
+[➡ Metaanalyse]{.imp}
+:::
+
+
+
+## [Deskriptive, explanative, explorative Studien]{style="font-size: 0.85em"} {.smaller .center}
+
+::: {style="font-size: 0.7em"}
+> Deskriptive Studien zielen auf die [Beschreibung der Verteilung von Variablen in der Population]{.imp} ab.  
+Explanative Studien zielen auf die [Verifikation/Falsifikation bestehender Kausalhypothesen]{.imp} ab.  
+Explorative Studien zielen auf die [Genese von Hypothesen]{.imp} ab.
+<br>
+:::
+
+::: {.fragment fragment-index=1}
+### Beispiele (Auszüge aus Abstracts): {.smaller}
+:::
+
+
+::: columns
+::: {.column width="50%"}
+::: {style="font-size: 0.65em"}
+::: {.fragment fragment-index=2}
+"Programme zur Umgestaltung von Studiengängen in den Bereichen Naturwissenschaften, Technik, Ingenieurwesen und Mathematik zielen häufig darauf ab, dass die teilnehmenden Lehrkräfte ihr Wissen über innovative Lehrmethoden mit anderen Lehrkräften in ihrem Fachbereich teilen. In dieser Studie werden Interviews, Erhebungen und Analysen sozialer Netzwerke vorgestellt, die zeigen, dass Lehrkräfte, die innovative Lehrmethoden anwenden, bevorzugt miteinander sprechen, was darauf hindeutet, dass größere Schritte erforderlich sind, damit Informationen über innovative Methoden die Lehrkräfte auf breiterer Basis erreichen." (@lane2020; Übersetzung Merk).<br>
+:::
+:::
+
+::: {style="font-size: 0.85em"}
+::: {.fragment fragment-index=3}
+[➡ Deskriptive Studie]{.imp}
+:::
+:::
+:::
+
+::: {.column width="50%"}
+::: {style="font-size: 0.65em"}
+::: {.fragment fragment-index=4}
+"Hintergrund: Wearables bieten Potenziale zur Förderung körperlicher Aktivität bei Älteren, jedoch sind Studien, die Effektivität und Nutzerfreundlichkeit gemeinsam betrachten, begrenzt. Fragestellung: Es werden Effekte einer umfangreichen selbstregulativen Intervention zur Förderung körperlicher Aktivität auf Basis kommerzieller Aktivitätstracker sowie deren Akzeptanz und Bewertung untersucht. Methode: In dieser Studie trugen 80 Personen (M = 67,03; SD = 3,97; 59 % Frauen) ein Fitbit Charge HR für insgesamt 21 Tage, einschließlich einer Baseline, einer PostInterventions- und einer Follow-up-Woche. Die Intervention umfasste Bausteine wie Zielsetzung und Planung, zusätzlich wurden 50 % randomisiert einer RollenmodellKomponente zugeordnet. Sozial-kognitive Prädiktoren nach dem Health Action Process Approach (HAPA) und Bewertung der Wearables wurden über Fragebögen erfasst.[...]"
+[@schmidt2022a].<br>
+:::
+:::
+
+::: {style="font-size: 0.85em"}
+::: {.fragment fragment-index=5}
+[➡ Explanative Studie]{.imp}
+:::
+:::
+:::
+:::
+
+
+## [Messwiederholte und querschnittliche Studien]{style="font-size: .82em" .center}
+::: {style="font-size: 0.65em"}
+> Bei [querschnittlichen Studien]{.imp} wird nur einmalig gemessen.  
+[Längsschnittliche Studien]{.imp} messen dieselben Variablen bei denselben Merkmalsträgern zu mehreren Zeitpunkten.  
+[Trendstudien]{.imp} messen dieselben Variablen derselben Grundgesamtheit (Population) zu mehreren Zeitpunkten.  
+:::
+
+. . .
+
+![](img/longi.png){width="60%" fig-align="center"}
+
+## Laborstudie, Feldstudie {.smaller .center}
+> Als [Laborstudien]{.imp} bezeichent man Studien, die in einer künstlich kontrollierbaren Umgebung stattfinden.  
+Bei [Feldstudien]{.imp} werden die Merkmalsträger in ihrer natürlichen Umgebung untersucht.
+
+
+## [Experiment, Quasi- und Nicht-Experiment]{style="font-size:.91em"} {.smaller}
+::: {style="font-size:.8em"}
+> [Experimente und Quasiexperimente]{.imp} teilen Proband\*innen in Gruppen ein, welche Sie unterschiedlichen Interventionen (auch »Behandlungen« oder »Treatments«) unterziehen.  
+[Nicht-Experimente]{.imp} verzichten hierauf.  
+Bei Experimenten liegt die Gruppeneinteilung in der Hand der Forschenden, wohingegen die Gruppen bei Quasi-Experimenten durch andere Mechanismen zustande kommen oder bereits feststehen.
+:::
+
+<br>
+
+. . .
+
+![](img/flowchart_exp_quasiexp.png){fig-align="center" width=87%}
+
+
+
+## <!--Steigerung der internen/externen Validität--> {.center}
+[{{< fa arrow-trend-up >}} Steigerung der int./ext. Validität]{.imp style="font-size:1.8em"}
+
+
+## Steigerung der internen Validität {.center .smaller}
+:::{.incremental}
+* Experimentelle Studiendesigns
+* Längsschnittliche Studiendesigns
+* Matching Studien
+* Laborstudien
+* Verblindung
+* Kontroll- und Vergleichsgruppen
+* Inferenzstatistik
+* Direkte Replikationsstudien
+* Präregistrierung
+:::
+
+## Steigerung der externen Validität {.center}
+:::{.incremental}
+* Große, möglichst repräsentative Stichproben
+* Zufallsstichproben
+* Feldstudien
+* Metaanalysen
+* Konzeptuelle Replikationsstudien
+:::
+
+
+## Literatur
+<style>
+div.callout {border-left-color: #8cd000 !important;
+</style>
+
+
+
