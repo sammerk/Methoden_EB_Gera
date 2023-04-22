@@ -739,6 +739,42 @@ Bei der Dokumentenanalyse werden bereits existierende schriftliche Artefakte unt
 :::
 
 
+## Qualitative Methodologie {.center}
+## Gütekriterien (quali) 
+Im Gegensatz zur quantitativen Forschung, wo ein stärkerer Konsens im Hinblick auf Gütekriterien besteht, wird die Diskussion im Rahmen des qualitativen Paradigmas viel kontroverser geführt und ausgehend von der wissenschaftstheoretischen Verortung unterschiedliche Positionen markiert. Es besteht ein großes Spannungsfeld von Strukturierung und Offenheit: Dieses reicht vom Anlehnen an quantitative Gütekriterien über die Formulierung eigener Kriterien, die dem qualitativen Kontext Rechnung tragen, bis hin zur Ablehnung und dem Infragestellen von allgemein verbindlichen Gütekriterien. 
+
+
+## Gütekriterien (quali) 
+Fünf aktuell diskutierte Kriterien:
+
+* Gegenstandsangemessenheit 
+* Empirische Sättigung
+* Theoretische Durchdringung
+* Textuelle Performanz 
+* Originalität 
+
+## Quali-typische Erhebungsmethoden
+* Narratives Interview
+* Biografisch-Narratives Interview
+* Leitfadeninterview
+* Dokumentenanalyse
+* Expert*inneninterview
+* Gruppendiskussion
+* Teilnehmende Beobachtung
+
+## Quali-typische Auswertungsmethoden {.center}
+
+
+## Qual. Inhaltsanalyse {.smaller}
+Das analytische Verfahren der qualitativen Inhaltsanalyse mit der Technik der Zusammenfassung gewährleistet das Identifizieren und Beschreiben ausgewählter Textbedeutungen, die sowohl deduktiv als auch induktiv als Kategorien aus den Daten extrahiert werden können. Charakteristisch für ein deduktives Vorgehen ist, dass die in dem Datenmaterial zu identifizierenden Kategorien bereits vorgegeben sind und quasi nur nach diesen „gesucht“ wird. Ist bspw. die Kategorie Elternhaus deduktiv gesetzt, so werden nur jene Textstellen herausgearbeitet, in denen dieses thematisiert wird, alle anderen Aspekte, die ggf. interessant im Hinblick auf die Forschungsfrage sind, finden keine Beachtung. Ein induktives Vorgehen zeichnet sich durch eine stärkere Offenheit aus, da vorab keine Kategorien gesetzt werden, die es im Datenmaterial zu identifizieren gilt. Wird im Analysegang eine Textstelle ausgemacht, die als relevant im Hinblick auf die Forschungsfrage erachtet wird, so wird möglichst nahe am Material eine Kategorie formuliert. 
+
+## Grounded Theory {.smaller}
+Charakteristisch für Grounded Theory Studien ist die Parallelität von Datenerhebung, Datenanalyse und Theoriebildung. Bereits nachdem erste Daten erhoben wurden, erfolgt zugleich deren systematische Analyse als auch das Entwickeln theoretischer Ideen. Letztere werden im Laufe des gesamten Forschungsprozesses als Memos festgehalten und dokumentieren die Theoretisierungsschritte. Die so gewonnenen Einblicke werden zum Ausgangspunkt für die Gewinnung weiterer Daten und analytischer Strategien gemacht. Entsprechend verläuft der Forschungsprozess nicht linear, sondern iterativ-zyklisch. Dabei spielen Offenheit und eine kritisch-zirkulierende Reflektion eine zentrale Rolle. Weiter erhobene Daten werden daher mit den bereits analysierten systematisch verglichen, um so sukzessive ihre Bedeutung – ohne sich dabei von a priori aufgestellten Hypothesen oder theoretischen Prämissen leiten zu lassen – erschließen zu können. Dies wird so lange durchgeführt, bis eine theoretische Sättigung einsetzt und keine neuen Aspekte mehr in den Daten entdeckt werden. 
+
+## Narrationsanalyse
+Im Gegensatz zur qualitativen Inhaltsanalyse und Grounded Theory, mit denen unterschiedliche Datensorten analysiert werden können, ist die Narrationsanalyse auf (biografisch-)narrative Interviews als Datenbasis angewiesen. Mit ihr kann die Prozessperspektive von Biografien, also ihre sequenzielle Aufschichtung, erfasst werden.  
+Typischerweise erfolgt sie in 5 Schritten: 1) formale Textanalyse, 2) strukturelle inhaltliche Beschreibung, 3) analytische Abstraktion, 4) Wissensanalyse & 5) kontrastiver Vergleich.
+
 ## Literatur
 <style>
 div.callout {border-left-color: #8cd000 !important;
