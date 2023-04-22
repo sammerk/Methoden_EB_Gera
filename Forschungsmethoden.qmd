@@ -504,7 +504,7 @@ Steyer, R., & Eid, M. (2013). Messen und Testen. Springer-Verlag.
 
 ## Typologie I: Skalenniveaus {.smaller .center auto-animate="true"}
 > Das Skalenniveau einer Variable beschreibt, welche Relationen im numerischen Relativ sinnvoll sind [@doering2016].  
-
+ 
 <br>
 ```{r}
 tibble(Skalenniveau = c("Nominalskala", "Ordinalskala", "Intervallskala"),
